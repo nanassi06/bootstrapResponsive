@@ -1,0 +1,409 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Detail Page</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.7.2/font/bootstrap-icons.css">
+  <link rel="stylesheet" href="./detailStyle.css">
+</head>
+
+<body>
+
+  <div class="container mt-5">
+    <div class="row">
+      <!--Thumbnails section-->
+      <div class="col-12 col-md-1 mb-3">
+        <a href="./index.html" class="mb-3 d-block">
+          <i class="arrow-back" data-lucide="circle-arrow-left"></i>
+        </a>
+        <div class="thumbnail sticky-col">
+          <img class="thumbnail"
+            src="https://www.bhphotovideo.com/cdn-cgi/image/fit=scale-down,width=500,quality=95/https://www.bhphotovideo.com/images/images500x500/hypergear_15613_vibe_wireless_headphones_white_1736768726_1865828.jpg"
+            alt="Thumbnail 1" class="img-thumbnail" onclick="changeImage(this.src);">
+          <img class="thumbnail"
+            src="https://static.bhphoto.com/images/multiple_images/images500x500/1736768728_IMG_2410484.jpg"
+            alt="Thumbnail 1" class="img-thumbnail" onclick="changeImage(this.src);">
+          <img class="thumbnail"
+            src="https://static.bhphoto.com/images/multiple_images/images500x500/1736768728_IMG_2410483.jpg"
+            alt="Thumbnail 2" class="img-thumbnail" onclick="changeImage(this.src);">
+          <img class="thumbnail"
+            src="https://static.bhphoto.com/images/multiple_images/images500x500/1736768728_IMG_2410487.jpg"
+            alt="Thumbnail 2" class="img-thumbnail" onclick="changeImage(this.src);">
+          <img class="thumbnail"
+            src="https://static.bhphoto.com/images/multiple_images/images500x500/1736768728_IMG_2410485.jpg"
+            alt="Thumbnail 2" class="img-thumbnail"onclick="changeImage(this.src);">
+        </div>
+      </div>
+
+      <!--Main Product Display-->
+      <div class="col-12 col-md-6 mb-3">
+        <div class="sticky-col">
+          <img class="main-product" id="mainImage"
+            src="https://www.bhphotovideo.com/cdn-cgi/image/fit=scale-down,width=500,quality=95/https://www.bhphotovideo.com/images/images500x500/hypergear_15613_vibe_wireless_headphones_white_1736768726_1865828.jpg"
+            alt="Main Product Image">
+        </div>
+      </div>
+      <!--Product Details-->
+      <div class="col-12 col-md-5">
+        <h1 class="mb-3">White Headset</h1>
+        <div class="mb-3">
+          <span class="h4 me-2">$99.99</span>
+          <span class="text-muted"><s>$120.00</s></span>
+        </div>
+        <p class="mb-4" style="font-size: 18px;">🎧 Experience premium sound quality and industry‑leading noise
+          cancellation with these wireless headphones, designed to deliver crisp highs, rich mids, and deep bass for an
+          immersive listening experience whether you’re enjoying music, movies, or calls; perfect for music lovers and
+          frequent travelers, they block out distractions from airplane engines to busy streets with adaptive
+          noise‑cancellation technology, while offering long‑lasting battery life, quick charging, and seamless
+          Bluetooth connectivity so you can stay connected wherever you go; lightweight yet durable, with plush ear
+          cushions and an ergonomic fit for all‑day comfort, they also feature intuitive touch controls, voice assistant
+          compatibility, and multi‑device pairing, making them the ultimate companion for work, travel, and everyday
+          life; beyond performance, their sleek modern design ensures you look as good as you feel, while advanced smart
+          features like ambient sound mode, customizable EQ settings, and automatic pause when you remove them add
+          convenience to every moment; whether you’re commuting, working remotely, or simply relaxing at home, these
+          headphones elevate your audio experience, combining style, comfort, and cutting‑edge technology into one
+          essential accessory that adapts effortlessly to your lifestyle; with superior call quality powered by built‑in
+          microphones, you’ll enjoy crystal‑clear conversations even in noisy environments, while the foldable design
+          and protective carrying case make them easy to pack and travel with, ensuring your music and productivity are
+          always within reach. In addition, these headphones support low-latency audio for gaming and video streaming,
+          ensuring perfect sync between sound and visuals. The intuitive app lets you personalize sound profiles,
+          monitor battery life, and update firmware with ease. Their IPX4 water resistance adds durability for workouts
+          and light rain, while the sleek matte finish resists fingerprints and scratches. Whether you're deep in focus
+          or winding down, these headphones adapt to your mood and environment, offering a truly intelligent listening
+          experience. To further enhance your experience, these headphones integrate cutting-edge AI-powered features
+          that adapt sound profiles based on your surroundings, ensuring optimal audio clarity whether you're in a quiet
+          room or a bustling café. The smart sensors detect when you’re wearing them and automatically pause or resume
+          playback, adding seamless convenience to your day. With support for high-resolution audio codecs like LDAC and
+          aptX HD, audiophiles can enjoy studio-quality sound wirelessly. The headphones also offer customizable touch
+          gestures, allowing you to control playback, adjust volume, or activate your voice assistant with a simple tap
+          or swipe. Battery life extends up to 40 hours on a single charge, and a quick 10-minute boost gives you up to
+          5 hours of playtime—perfect for last-minute travel or meetings. Whether you're tuning into a podcast, joining
+          a virtual call, or escaping into your favorite playlist, these headphones deliver unmatched performance,
+          style, and smart functionality tailored to your lifestyle.
+        </p>
+        <!--Quantity-->
+        <div class="mb-4">
+          <label for="quantity" class="form-label">Quantity:</label>
+          <input type="number" class="form-control" id="quantity" value="1" min="1" style="width: 80px;">
+        </div>
+        <!--Button-->
+
+        <button class="btn btn-primary btn-lg mb-3 me-2">
+          <i class="bi bi-currency-dollar"></i> Buy Now
+        </button>
+        <button class="btn btn-outline-secondary btn-lg mb-3">
+          <i class="bi bi-cart-plus"></i> Add to Cart
+        </button>
+      </div>
+
+      <!--Carousel-->
+      <h3 style="margin-top: 50px;">Related Products</h3>
+      <div id="carouselExampleAutoplaying" class="carousel slide" data-bs-ride="true">
+        <div class="carousel-inner">
+          <!--1st Carousel-->
+          <div class="carousel-item active">
+            <div class="container mt-5">
+              <div class="row g-3">
+                <!-- Card 1 -->
+                <div class="col-6 col-md-4 col-lg-3 mb-3">
+                  <div class="card" style="width: 18rem;">
+                    <img
+                      src="https://myhypergear.com/cdn/shop/files/001_e7455473-e685-4ce4-8105-57ebbebcf0a7.png?v=1649794271"
+                      class="card-img-top d-block w-100" alt="...">
+                    <div class="card-body">
+                      <p class="card-text">Similar Product</p>
+                    </div>
+                  </div>
+                </div>
+
+                <!-- Card 2 -->
+                <div class="col-6 col-md-4 col-lg-3 mb-3">
+                  <div class="card" style="width: 18rem;">
+                    <img
+                      src="https://myhypergear.com/cdn/shop/files/001_e7455473-e685-4ce4-8105-57ebbebcf0a7.png?v=1649794271"
+                      class="card-img-top d-block w-100" alt="...">
+                    <div class="card-body">
+                      <p class="card-text">Similar Product</p>
+                    </div>
+                  </div>
+                </div>
+
+                <!-- Card 3 -->
+                <div class="col-6 col-md-4 col-lg-3 mb-3">
+                  <div class="card" style="width: 18rem;">
+                    <img
+                      src="https://myhypergear.com/cdn/shop/files/001_e7455473-e685-4ce4-8105-57ebbebcf0a7.png?v=1649794271"
+                      class="card-img-top d-block w-100" alt="...">
+                    <div class="card-body">
+                      <p class="card-text">Similar Product</p>
+                    </div>
+                  </div>
+                </div>
+
+                <!-- Card 4 -->
+                <div class="col-6 col-md-4 col-lg-3 mb-3">
+                  <div class="card" style="width: 18rem;">
+                    <img
+                      src="https://myhypergear.com/cdn/shop/files/001_e7455473-e685-4ce4-8105-57ebbebcf0a7.png?v=1649794271"
+                      class="card-img-top d-block w-100" alt="...">
+                    <div class="card-body">
+                      <p class="card-text">Similar Product</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+          </div>
+
+          <!--2nd Carousel-->
+          <div class="carousel-item">
+            <div class="container mt-5">
+              <div class="row g-3">
+                <!-- Card 1 -->
+                <div class="col-6 col-md-4 col-lg-3 mb-3">
+                  <div class="card" style="width: 18rem;">
+                    <img
+                      src="https://myhypergear.com/cdn/shop/files/001_e7455473-e685-4ce4-8105-57ebbebcf0a7.png?v=1649794271"
+                      class="card-img-top d-block w-100" alt="...">
+                    <div class="card-body">
+                      <p class="card-text">Similar Product</p>
+                    </div>
+                  </div>
+                </div>
+
+                <!-- Card 2 -->
+                <div class="col-6 col-md-4 col-lg-3 mb-3">
+                  <div class="card" style="width: 18rem;">
+                    <img
+                      src="https://myhypergear.com/cdn/shop/files/001_e7455473-e685-4ce4-8105-57ebbebcf0a7.png?v=1649794271"
+                      class="card-img-top d-block w-100" alt="...">
+                    <div class="card-body">
+                      <p class="card-text">Similar Product</p>
+                    </div>
+                  </div>
+                </div>
+
+                <!-- Card 3 -->
+                <div class="col-6 col-md-4 col-lg-3 mb-3">
+                  <div class="card" style="width: 18rem;">
+                    <img
+                      src="https://myhypergear.com/cdn/shop/files/001_e7455473-e685-4ce4-8105-57ebbebcf0a7.png?v=1649794271"
+                      class="card-img-top d-block w-100" alt="...">
+                    <div class="card-body">
+                      <p class="card-text">Similar Product</p>
+                    </div>
+                  </div>
+                </div>
+
+                <!-- Card 4 -->
+                <div class="col-6 col-md-4 col-lg-3 mb-3">
+                  <div class="card" style="width: 18rem;">
+                    <img
+                      src="https://myhypergear.com/cdn/shop/files/001_e7455473-e685-4ce4-8105-57ebbebcf0a7.png?v=1649794271"
+                      class="card-img-top d-block w-100" alt="...">
+                    <div class="card-body">
+                      <p class="card-text">Similar Product</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!--3rd Carousel-->
+          <div class="carousel-item">
+            <div class="container mt-5">
+              <div class="row g-3">
+                <!-- Card 1 -->
+                <div class="col-6 col-md-4 col-lg-3 mb-3">
+                  <div class="card" style="width: 18rem;">
+                    <img
+                      src="https://myhypergear.com/cdn/shop/files/001_e7455473-e685-4ce4-8105-57ebbebcf0a7.png?v=1649794271"
+                      class="card-img-top d-block w-100" alt="...">
+                    <div class="card-body">
+                      <p class="card-text">Similar Product</p>
+                    </div>
+                  </div>
+                </div>
+
+                <!-- Card 2 -->
+                <div class="col-6 col-md-4 col-lg-3 mb-3">
+                  <div class="card" style="width: 18rem;">
+                    <img
+                      src="https://myhypergear.com/cdn/shop/files/001_e7455473-e685-4ce4-8105-57ebbebcf0a7.png?v=1649794271"
+                      class="card-img-top d-block w-100" alt="...">
+                    <div class="card-body">
+                      <p class="card-text">Similar Product</p>
+                    </div>
+                  </div>
+                </div>
+
+                <!-- Card 3 -->
+                <div class="col-6 col-md-4 col-lg-3 mb-3">
+                  <div class="card" style="width: 18rem;">
+                    <img
+                      src="https://myhypergear.com/cdn/shop/files/001_e7455473-e685-4ce4-8105-57ebbebcf0a7.png?v=1649794271"
+                      class="card-img-top d-block w-100" alt="...">
+                    <div class="card-body">
+                      <p class="card-text">Similar Product</p>
+                    </div>
+                  </div>
+                </div>
+
+                <!-- Card 4 -->
+                <div class="col-6 col-md-4 col-lg-3 mb-3">
+                  <div class="card" style="width: 18rem;">
+                    <img
+                      src="https://myhypergear.com/cdn/shop/files/001_e7455473-e685-4ce4-8105-57ebbebcf0a7.png?v=1649794271"
+                      class="card-img-top d-block w-100" alt="...">
+                    <div class="card-body">
+                      <p class="card-text">Similar Product</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+        </div>
+        <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleAutoplaying"
+          data-bs-slide="prev">
+          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Previous</span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleAutoplaying"
+          data-bs-slide="next">
+          <span class="carousel-control-next-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Next</span>
+        </button>
+      </div>
+
+    </div>
+  </div>
+  <!-- Footer -->
+  <footer class="text-center text-white" style="background-color: blue;">
+    <!-- Grid container -->
+    <div class="container">
+      <!-- Section: Links -->
+      <section class="mt-5">
+        <!-- Grid row-->
+        <div class="row text-center d-flex justify-content-center pt-5">
+          <!-- Grid column -->
+          <div class="col-md-2">
+            <h6 class="text-uppercase font-weight-bold">
+              <a href="#!" class="text-white">About us</a>
+            </h6>
+          </div>
+          <!-- Grid column -->
+
+          <!-- Grid column -->
+          <div class="col-md-2">
+            <h6 class="text-uppercase font-weight-bold">
+              <a href="#!" class="text-white">Products</a>
+            </h6>
+          </div>
+          <!-- Grid column -->
+
+          <!-- Grid column -->
+          <div class="col-md-2">
+            <h6 class="text-uppercase font-weight-bold">
+              <a href="#!" class="text-white">Awards</a>
+            </h6>
+          </div>
+          <!-- Grid column -->
+
+          <!-- Grid column -->
+          <div class="col-md-2">
+            <h6 class="text-uppercase font-weight-bold">
+              <a href="#!" class="text-white">Help</a>
+            </h6>
+          </div>
+          <!-- Grid column -->
+
+          <!-- Grid column -->
+          <div class="col-md-2">
+            <h6 class="text-uppercase font-weight-bold">
+              <a href="#!" class="text-white">Contact</a>
+            </h6>
+          </div>
+          <!-- Grid column -->
+        </div>
+        <!-- Grid row-->
+      </section>
+      <!-- Section: Links -->
+
+      <hr class="my-5" />
+
+      <!-- Section: Text -->
+      <section class="mb-5">
+        <div class="row d-flex justify-content-center">
+          <div class="col-lg-8">
+            <p>
+              Our store is committed to providing reliable products and trustworthy service. Every item is carefully
+              selected to ensure quality, durability, and value for our customers. We prioritize transparency, secure
+              transactions, and customer satisfaction in everything we do. Shop with confidence knowing that your
+              experience and trust matter most to us.
+            </p>
+          </div>
+        </div>
+      </section>
+      <!-- Section: Text -->
+
+      <!-- Section: Social -->
+      <section class="text-center mb-5">
+        <a href="" class="text-white me-4">
+          <i class="fab fa-facebook-f"></i>
+        </a>
+        <a href="" class="text-white me-4">
+          <i class="fab fa-twitter"></i>
+        </a>
+        <a href="" class="text-white me-4">
+          <i class="fab fa-google"></i>
+        </a>
+        <a href="" class="text-white me-4">
+          <i class="fab fa-instagram"></i>
+        </a>
+        <a href="" class="text-white me-4">
+          <i class="fab fa-linkedin"></i>
+        </a>
+        <a href="" class="text-white me-4">
+          <i class="fab fa-github"></i>
+        </a>
+      </section>
+      <!-- Section: Social -->
+    </div>
+    <!-- Grid container -->
+
+    <!-- Copyright -->
+    <div class="text-center p-3" style="background-color: rgba(0, 0, 0, 0.2)">
+      © 2020 Copyright:
+      <a class="text-white" href="https://mdbootstrap.com/">MDBootstrap.com</a>
+    </div>
+    <!-- Copyright -->
+  </footer>
+  <!-- Footer -->
+
+
+  <script src="https://unpkg.com/lucide@latest"></script>
+  <script>
+    lucide.createIcons();
+  </script>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+    crossorigin="anonymous"></script>
+
+    <!--JavaScript-->
+  <script>
+    function changeImage(src) {
+      document.getElementById("mainImage").src = src;
+    }
+  </script>
+</body>
+
+</html>
